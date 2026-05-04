@@ -27,6 +27,13 @@
       displayTriangleType(triangleType);
     }
 
+    // After triangle type is calculated
+    gtag('event', 'triangle_calculated', {
+      'triangle_type': triangleType,  // e.g., 'EQUILATERAL'
+      'timestamp': new Date().toISOString()
+    });
+
+
     /*
      * Updates the HTML element result with the passed argument 
      * (used for the triangle type)
